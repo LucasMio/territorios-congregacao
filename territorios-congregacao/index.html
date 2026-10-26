@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#1f3864" />
+    <meta name="description" content="Territórios da Congregação Vila Exemplo: mapa e marcação das quadras trabalhadas." />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Territórios" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="icon" href="/icone.svg" type="image/svg+xml" />
+    <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <title>Territórios – Vila Exemplo</title>
+    <script>
+      // Aplica o tema (claro/escuro) e o tamanho de letra escolhidos antes de desenhar a página, para não piscar.
+      try { var t = localStorage.getItem('territorios:tema'); if (t === 'claro' || t === 'escuro') document.documentElement.setAttribute('data-tema', t); } catch (e) {}
+      try { var l = localStorage.getItem('territorios:letra'); if (l === 'grande' || l === 'maior') document.documentElement.setAttribute('data-letra', l); } catch (e) {}
+    </script>
+  </head>
+  <body>
+    <noscript>Para usar o sistema de territórios, ative o JavaScript no navegador.</noscript>
+    <div id="raiz"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
